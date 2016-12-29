@@ -22,12 +22,12 @@ class PostsController < AuthorController
   def edit
   end
   def publish
-      @post.update(published: true)
+      @post.publish
       redirect_to authors_posts_url
     end
 
     def unpublish
-      @post.update(published: true)
+      @post.unpublish
       redirect_to authors_posts_url
     end
   # POST /posts
